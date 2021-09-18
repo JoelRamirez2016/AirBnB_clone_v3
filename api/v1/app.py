@@ -12,9 +12,12 @@ HBNB_API_PORT = os.getenv('HBNB_API_PORT')
 app = Flask(__name__)
 app.register_blueprint(app_views)
 
+
 @app.errorhandler(404)
 def page_not_found(e):
+    """return error message for 404"""
     return jsonify(error="Not found")
+
 
 @app.teardown_appcontext
 def teardown_db(exeption):
