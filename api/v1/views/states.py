@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""define routes for api states"""
+"""define routes for api cities"""
 from flask import jsonify, abort, request
-from models.state import State
+from models.state import State, City
 from api.v1.views import app_views
 from models import storage
 
