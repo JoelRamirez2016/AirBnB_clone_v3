@@ -10,6 +10,7 @@ HBNB_API_HOST = os.getenv('HBNB_API_HOST')
 HBNB_API_PORT = os.getenv('HBNB_API_PORT')
 
 app = Flask(__name__)
+app.register_blueprint(app_views)
 
 
 @app.teardown_appcontext
