@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""define routes for api states"""
 from flask import jsonify, abort, request
 from models.state import State
 from api.v1.views import app_views
