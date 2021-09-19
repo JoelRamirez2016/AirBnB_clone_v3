@@ -45,7 +45,6 @@ def delete_city(city_id):
 def create_city(state_id):
     """Creates a new City"""
     state = storage.get(State, state_id)
-    print(state)
     if not state:
         abort(404)
     state_json = None
