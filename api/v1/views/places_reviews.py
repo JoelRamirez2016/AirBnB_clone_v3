@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""define routes for api places"""
+"""define routes for api reviews"""
 from flask import jsonify, abort, request
 from models.place import Place
 from models.review import Review
