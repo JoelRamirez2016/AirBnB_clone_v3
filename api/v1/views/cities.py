@@ -32,11 +32,11 @@ def city_id(city_id):
                  strict_slashes=False, methods=["DELETE"])
 def delete_city(city_id):
     """Deletes a City object"""
-    city = storage.get(State, city_id)
-    if (city):
+    city = storage.get(City, city_id)
+    if city:
         storage.delete(city)
         storage.save()
-        return jsonify({})
+        return jsonify({}), 200
     else:
         abort(404)
 
@@ -45,7 +45,7 @@ def delete_city(city_id):
                  strict_slashes=False, methods=["POST"])
 def create_city(state_id):
     """Creates a new City"""
-    state = storage.get(State, state_id)
+    state = storage.get(City, state_id)
     if not state:
         abort(404)
     state_json = None
